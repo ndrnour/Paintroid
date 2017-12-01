@@ -23,6 +23,7 @@
 #include <list>
 
 #include <android/log.h>
+#include <string.h>
 
 #define  LOG_TAG    "native-lib"
 #define  LOGI(...)  __android_log_print(ANDROID_LOG_INFO,LOG_TAG,__VA_ARGS__)

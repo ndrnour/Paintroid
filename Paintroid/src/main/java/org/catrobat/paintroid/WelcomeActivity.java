@@ -19,7 +19,9 @@
 
 package org.catrobat.paintroid;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -105,6 +107,11 @@ public class WelcomeActivity extends AppCompatActivity {
 		}
 	};
 	private Session session;
+
+	@Override
+	protected void attachBaseContext(Context newBase) {
+		super.attachBaseContext(MultilingualActivity.onAttach(newBase));
+	}
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
